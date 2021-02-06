@@ -76,7 +76,7 @@ where
                 val
             }
             _=> {
-                self.0.entries.as_mut_slice()[key] = prev
+                self.0.entries.as_mut_slice()[key] = prev;
                 panic!("invalid key")
             }
         }
