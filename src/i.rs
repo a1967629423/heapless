@@ -28,6 +28,12 @@ pub struct Queue<A, U = usize, C = MultiCore> {
     pub(crate) buffer: MaybeUninit<A>,
 }
 
+pub struct Slab<A> {
+    pub(crate) entries:Vec<A>,
+    pub(crate) len:usize,
+    pub(crate) next:usize,
+}
+
 /// `const-fn` version of [`String`](../struct.String.html)
 pub struct String<A> {
     pub(crate) vec: Vec<A>,
